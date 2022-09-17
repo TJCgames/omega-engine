@@ -25,7 +25,7 @@ const mod = {
         [
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
             "ðþȝƿəŋſÐÞȜǷƏŊ",
-            "æœĳǉ"
+            "æœĳǉǝÆŒĲǇƎ"
         ]],
         ["Alphabet",
         [
