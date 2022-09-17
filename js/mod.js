@@ -4,7 +4,7 @@ const mod = {
     version: "1.0.0",
     engineVer: "1.0.0 P1", //DO NOT MODIFY
     debugMode: false,
-    Infinities: [new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38")],
+    Infinities: [new Decimal(65536), new Decimal("1e12"), new Decimal("1e100"), new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38"), new Decimal("ee100"), new Decimal(2).pow(new Decimal(2).pow(1024)), new Decimal("ee535")],
     themes: [
         ["Dark", "css/themes/dark.css"],
         ["Dark Alt (by Jeehan2561)", "css/themes/darkalt.css"],
@@ -19,7 +19,7 @@ const mod = {
         [
             "αβγδεζηθικλμνξοπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
             "ψϝϛͱϻϙͳϸ",
-            ["<span class='flipped-v'>Ω</span>", "<span class='flipped-v'>Ω</span><sup>2</sup>","<span class='flipped-v'>Ω</span><sup>3</sup>","<span class='flipped-v'>Ω</span><sup>2<sup>2</sup></sup>"]
+            ["Ʊ", "ƱƱ", "ƱƱƱ", "4Ʊ", "5Ʊ", "6Ʊ", "7Ʊ", "8Ʊ", "9Ʊ", "10Ʊ"]
         ]],
         ["Latin",
         [
@@ -31,19 +31,19 @@ const mod = {
         [
             "abcdefghijklmnopqrstuvwxyz",
             "123456789",
-            "ABCD"
+            "ABCDEFGHIJ"
         ]],
         ["Symbols",
         [
             '!"£$%^&*;:@',
             "<,[{}].>",
-            "+×÷^"
+            "+-×÷^_=#`?"
         ]],
         ["Binary",
         [
             '01',
             "01",
-            "2345"
+            "23456789AB"
         ]],
         ["Random",
         [
