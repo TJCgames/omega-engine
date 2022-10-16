@@ -1,6 +1,6 @@
 const mod = {
-    primaryName: "ω",
-    secondaryName: "Engine",
+    primaryName: "Omega engine",
+    secondaryName: " Infinite infinities",
     version: "1.0.0",
     engineVer: "1.0.0 P1", //DO NOT MODIFY
     debugMode: false,
