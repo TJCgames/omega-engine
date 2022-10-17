@@ -103,6 +103,7 @@ const game = {
         new Achievement("Teralayers", "Reach layer 1 trillion and find the second tier of infinity", "ƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[1])),
         new Achievement("Chrome", "Reach layer googol and find the third tier of infinity", "ƱƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[2])),
         new Achievement("A bit more familiar", "Reach layer 2^1024 and find the fourth tier of infinity", "4Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[3])),
+        new Achievement("The end. Or is it...", "Reach layer ee535 and find the tenth tier of infinity", "10Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[9])),
     ],
     secretAchievements: [
         new Achievement("A very long wait...", "Have a game with over 3 months of time", "...", () => game.timeSpent > 50803200),
