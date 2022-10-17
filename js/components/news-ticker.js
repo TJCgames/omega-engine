@@ -19,7 +19,12 @@ Vue.component("news-ticker", {
                 "go visit omega layers ez and sussy layers 2",
                 "join the community server",
                 "content when",
-                "omega engine v-1.0.0: we removed all the features that aren't the main game"
+                "omega engine v-1.0.0: we removed all the features that aren't the main game",
+                "i lied, there's only 10 infinities",
+                "can you <b>size up</b>?",
+                "01110000 01110010 01100101 01110011 01110100 01101001 01100111 01100101",
+                "do we even exist?",,
+                "infinity is confusing. the first spans from 65,536 to 131,071!",
             ],
             currentMessage: "",
             messageIndex: -1
