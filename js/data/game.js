@@ -99,7 +99,7 @@ const game = {
         new Achievement("Upgradalicious", "Max all the non-meta upgrades", "↑<sub>↑<sub>↑</sub></sub>", () => (Object.values(game.restackLayer.permUpgrades).filter(u => u.level.gt(0)).length + Object.values(game.restackLayer.permUpgrades).filter(u => u.level.gt(1)).length) == 12),
         new Achievement("Idle^2", "Buy the meta upgrade", "↑<sub>2<sub>", () => game.restackLayer.metaUpgrade.level.gte(1)),
         new Achievement("No turning back", "Go meta and be reborn", "&Omega;", () => game.metaLayer.active),
-//         new Achievement("This is new", "Reach layer 65,536 and find the first tier of infinity", "Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[0])),
+        new Achievement("This is new", "Reach layer 65,536 and find the first tier of infinity", "Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[0])),
 //         new Achievement("Teralayers", "Reach layer 1 trillion and find the second tier of infinity", "ƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[1])),
 //         new Achievement("Chrome", "Reach layer googol and find the third tier of infinity", "ƱƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[2])),
     ],
