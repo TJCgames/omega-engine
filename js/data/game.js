@@ -101,7 +101,7 @@ const game = {
         new Achievement("No turning back", "Go meta and be reborn", "&Omega;", () => game.metaLayer.active),
         new Achievement("This is new", "Reach layer 65,536 and find the first tier of infinity", "Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[0])),
         new Achievement("Teralayers", "Reach layer 1 trillion and find the second tier of infinity", "ƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[1])),
-//         new Achievement("Chrome", "Reach layer googol and find the third tier of infinity", "ƱƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[2])),
+        new Achievement("Chrome", "Reach layer googol and find the third tier of infinity", "ƱƱƱ", () => game.metaLayer.layer.gte(mod.Infinities[2])),
     ],
     secretAchievements: [
         new Achievement("A very long wait...", "Have a game with over 3 months of time", "...", () => game.timeSpent > 50803200),
