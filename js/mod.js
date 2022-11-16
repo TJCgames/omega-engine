@@ -107,7 +107,7 @@ const mod = {
              "Extreme voltage", "Insane voltage", "Ludicrous voltage", "Zero point module",
              "Ultimate voltage", "Ultra high voltage"
             ] 
-        ]]
+        ]
     ],
     fonts: [
         ["Monospace Typewriter", "css/fonts/typespace.css"],
