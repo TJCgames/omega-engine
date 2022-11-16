@@ -66,6 +66,47 @@ const mod = {
             ],
             "",
             ["1D", "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D"] 
+        ]],
+        ["Nomifactory",
+        [
+            [
+             "Electric furnace", "Macerator", "Alloy smelter", "Arc furnace", "Assembling machine",
+             "Autoclave", "Bending machine", "Brewery", "Canning machine", "Centrifuge",
+             "Chemical bath", "Chemical reactor", "Compressor", "Cutting machine", "Distillery",
+             "Electrolyzer", "Electromagnetic separator", "Extractor", "Extruder", "Fermenter",
+             "Fluid heater", "Fluid solidifier", "Forge hammer", "Forming press", "Lathe", "Mxer",
+             "Ore washing plant", "Packager", "Gas collector", "Polarizer",
+             "Precision laser engraver", "Sifting machine", "Thermal centrifuge", "Wiremill",
+             "Circuit assembler", "Rock breaker", "Miner", "Combustion generator", "Steam turbine",
+             "Gas turbine", "Item collector", "Fisher", "Pump"]
+            ],
+            [
+             "Aluminium", "Beryllium", "Cobalt", "Copper", "Gold", "Iron", "Lead", "Lithium",
+             "Molybdenum", "Neodynium", "Nickel", "Palladium", "Platinum", "Plutonium 239",
+             "Silver", "Sulfur", "Thorium", "Tin", "Naquadah", "Certus quartz", "Almandite",
+             "Asbestos", "Banded iron", "Blue topaz", "Brown limonite", "Calcite", "Cassiterite",
+             "Cassiterite sand", "Chalcopyrite", "Chromite", "Cinnabar", "Coal", "Cobaltite",
+             "Sheldonite", "Diamond", "Emerald", "Galena", "Garnierite", "Green sapphire",
+             "Grossular", "Ilmenite", "Bauxite", "Lazurite", "Magnesite", "Magnetite",
+             "Molybdenite", "Powellite", "Pyrite", "Pyrolusite", "Pyrope", "Rock salt", "Ruby",
+             "Salt", "Saltpeter", "Sapphire", "Scheelite", "Sodalite", "Tantalite", "Spesartine",
+             "Sphalertite", "Stibnite", "Tetrahedrite", "Topaz", "Tungstate", "Urainite",
+             "Wulfenite", "Yellow limonite", "Nether quartz", "Quartzite", "Graphite", "Bornite",
+             "Chalcocite", "Realgar", "Bastnasite", "Pentlandite", "Spodumene", "Lepidolite",
+             "Glauconite", "Malachite", "Mica", "Barite", "Alunite", "Talc", "Soapstone",
+             "Kyanite", "Pyrochlore", "Oilsands", "Olivine", "Opal", "Amethyst", "Lapis",
+             "Apatite", "Tricalcium phosphate", "Red garnet", "Yellow garnet",
+             "Vanadium Magnetite", "Pollucite", "Bentonite", "Fullers earth", "Pitchblende",
+             "Monazite", "Trona", "Gypsium", "Zeolite", "Redstone", "Electrotine", "Diatomite",
+             "Granatic mineral sand", "Garnet sand", "Basaltic mineral sand", "Draconium",
+             "Osmiridium 80/20", "Iridosmine 80/20", "Kaemanite", "Fluorite", "Snowchestite",
+             "Darmstadtite", "Dulysite"
+            ],
+            [
+             "Ultra low voltage", "Low voltage", "Medium voltage", "High voltage",
+             "Extreme voltage", "Insane voltage", "Ludicrous voltage", "Zero point module",
+             "Ultimate voltage", "Ultra high voltage"
+            ] 
         ]]
     ],
     fonts: [
