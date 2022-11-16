@@ -78,7 +78,7 @@ const mod = {
              "Ore washing plant", "Packager", "Gas collector", "Polarizer",
              "Precision laser engraver", "Sifting machine", "Thermal centrifuge", "Wiremill",
              "Circuit assembler", "Rock breaker", "Miner", "Combustion generator", "Steam turbine",
-             "Gas turbine", "Item collector", "Fisher", "Pump"]
+             "Gas turbine", "Item collector", "Fisher", "Pump"
             ],
             [
              "Aluminium", "Beryllium", "Cobalt", "Copper", "Gold", "Iron", "Lead", "Lithium",
