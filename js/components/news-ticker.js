@@ -23,8 +23,9 @@ Vue.component("news-ticker", {
                 "i lied, there's only 10 infinities",
                 "can you <b>size up</b>?",
                 "01110000 01110010 01100101 01110011 01110100 01101001 01100111 01100101",
-                "do we even exist?",,
+                "do we even exist?",
                 "infinity is confusing. the first spans from 65,536 to 131,071!",
+                "ah yes, o-llgers"
             ],
             currentMessage: "",
             messageIndex: -1
