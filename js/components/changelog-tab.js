@@ -1,6 +1,11 @@
 Vue.component("changelog-tab", {
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.0.4j</template>
+    <template v-slot:text>- Change the version number from the default to the actual version number<br>- Be confused about why it took so long
+    </template>
+    </guide-item>
+    <guide-item>
     <template v-slot:title>v0.0.4i</template>
     <template v-slot:text>- Hopefully fix changelog tab
     </template>
