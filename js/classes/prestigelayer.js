@@ -160,7 +160,7 @@ class PrestigeLayer
         const totalCombinations = (orders.length + 1) * (letters.length*letters.length + letters.length);
         const arrowOrder = Math.floor(Math.log(nLayer) / Math.log(totalCombinations));
         const order = Math.floor(nLayer / (letters.length*letters.length + letters.length));
-        if (order === 0) {
+        if (nLayer >= letters.length) {
             return letters[nLayer];
         }
         if (arrowOrder >= 4) {
