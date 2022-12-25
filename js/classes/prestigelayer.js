@@ -169,7 +169,7 @@ class PrestigeLayer
         if (nLayer >= totalCombinations) {
             return PrestigeLayer.getNameForLayer(nLayer % totalCombinations) + "↑" + PrestigeLayer.getNameForLayer(Math.floor(nLayer / totalCombinations) - 1);
         }
-        const first = (Math.floor(nLayer / (letters.length)) - 1) % (letters.length*letters.length + letters.length + 1)
+        const first = (Math.floor(nLayer / (letters.length)) - 1) % letters.length
         const last = nLayer % letters.length
         return "<span>" + letters[first] + (order >= 1 ? "<sub>" + orders[order - 1] + "</sub>" : "") + "<sup>" + letters[last] + "</sup>"
     }
