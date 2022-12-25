@@ -157,26 +157,24 @@ class PrestigeLayer
         }
         const letters = LETTERS;
         const orders = ORDERS;
-        const totalCombinations = (orders.length + 2) * letters.length;
+        const totalCombinations = (orders.length + 1) * (letters.length*letters.length + letters.length);
         const arrowOrder = Math.floor(Math.log(nLayer) / Math.log(totalCombinations));
-        const order = Math.floor(nLayer / letters.length);
-        if(order === 0)
-        {
+        const order = Math.floor(nLayer / (letters.length*letters.length + letters.length));
+        if (order === 0) {
             return letters[nLayer];
         }
-        if(arrowOrder >= 4)
-        {
+        if (arrowOrder >= 4) {
             return PrestigeLayer.getNameForLayer(Math.floor(nLayer / Math.pow(totalCombinations, arrowOrder - 1))) + "↑↑" + (arrowOrder - 1);
         }
-        if(nLayer >= totalCombinations)
-        {
+        if (nLayer >= totalCombinations) {
             return PrestigeLayer.getNameForLayer(nLayer % totalCombinations) + "↑" + PrestigeLayer.getNameForLayer(Math.floor(nLayer / totalCombinations) - 1);
         }
-        return "<span>" + letters[letters.length - 1] + (order > 1 ? "<sub>" + orders[order - 2] + "</sub>" : "") + "</span>" + "<sup>" + letters[(nLayer) % letters.length] + "</sup>";
+        const first = Math.floor(nLayer / (letters.length - 1)) - 1
+        const last = nLayer % letters.length
+        return "<span>" + letters[first] + (order >= 1) + (order >= 1 ? "<sub>" + orders[order - 1] + "</sub>" : "") + "<sup>" + letters[last] + "</sup>"
     }
 
-    static getFullNameForLayer(layer)
-    {
+    static getFullNameForLayer (layer) {
         let name = LETTERS[layer % LETTERS.length];
         if(layer % (LETTERS.length * 2) >= LETTERS.length)
         {

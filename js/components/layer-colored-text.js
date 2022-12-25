@@ -4,21 +4,45 @@ Vue.component("layer-colored-text", {
         textColor: function()
         {
             const lid = new Decimal(this.getLayerId());
-            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[3]))
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[9]))
             {
                 return "#ffffff";
             }
-            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[2]))
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[8]))
+            {
+                return "#ffff00";
+            }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[7]))
             {
                 return "#ff9100";
             }
-            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[1]))
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[6]))
             {
                 return "#00ffb7";
             }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[5]))
+            {
+                return "#c0c0c0";
+            }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[4]))
+            {
+                return "#8080ff";
+            }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[3]))
+            {
+                return "#ff0000";
+            }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[2]))
+            {
+                return "#808000";
+            }
+            if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[1]))
+            {
+                return "#0000ff";
+            }
             if(this.getLayerId() instanceof Decimal && this.getLayerId().gte(mod.Infinities[0]))
             {
-                return "#ff00ff";
+                return "#004000";
             }
             if(this.getLayerId() instanceof Decimal && this.getLayerId().lt(0))
             {
