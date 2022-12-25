@@ -1,7 +1,7 @@
 Vue.component("changelog-tab", {
     template: `<div class="changelog-tab">
     <guide-item>
-    <template v-slot:title>v0.0.4b-d</template>
+    <template v-slot:title>v0.0.4b-e</template>
     <template v-slot:text>- Fix layer names
     </template>
     <template v-slot:title>v0.0.4</template>
