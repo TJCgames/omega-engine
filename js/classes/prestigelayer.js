@@ -171,7 +171,7 @@ class PrestigeLayer
         }
         const first = Math.floor(nLayer / (letters.length - 1)) - 1
         const last = nLayer % letters.length
-        return "<span>" + letters[first] + (order >= 1) + (order >= 1 ? "<sub>" + orders[order - 1] + "</sub>" : "") + "<sup>" + letters[last] + "</sup>"
+        return "<span>" + letters[first] + (order >= 1 ? "<sub>" + orders[order - 1] + "</sub>" : "") + "<sup>" + letters[last] + "</sup>"
     }
 
     static getFullNameForLayer (layer) {

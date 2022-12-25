@@ -1,6 +1,9 @@
 Vue.component("changelog-tab", {
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.0.4b-d</template>
+    <template v-slot:text>- Fix layer names
+    </template>
     <template v-slot:title>v0.0.4</template>
     <template v-slot:text>- More colours to layer names<br>- Compacted layer names (hope this works)
     </template>
