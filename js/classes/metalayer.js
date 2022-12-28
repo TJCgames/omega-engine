@@ -64,6 +64,7 @@ class MetaLayer
         {
             multi = multi.pow(upg.apply());
         }
+        multi = multi.mul(game.metaBoosters.totalBoost)
         return new Decimal(game.restackLayer.metaUpgrade.apply()).mul(multi).pow(game.restackLayer.upgradeTreeNames.resourceMultiplier.apply());
     }
 

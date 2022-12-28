@@ -154,6 +154,11 @@ function tickGame(seconds)
 
     game.restackLayer.tick(seconds);
     game.metaLayer.tick(seconds);
+    game.metaBoosters.tick(seconds);
+    if (game.metaBoosters.nextLayer.lt(game.highestLayer)) {
+        game.metaBoosters.boostPoints = game.metaBoosters.boostPoints.add(game.highestLayer.sub(game.metaBoosters.nextLayer))
+        game.metaBoosters.nextLayer = game.highestLayer
+    }
 }
 
 function simulateGameTime(seconds)
@@ -245,6 +250,10 @@ onkeydown = e =>
         if(lc === "l")
         {
             game.settings.tab = "Layers";
+        }
+        if(lc === "b")
+        {
+            game.settings.tab = "Meta boosters";
         }
     }
 

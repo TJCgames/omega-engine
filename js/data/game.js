@@ -1,5 +1,5 @@
 const game = {
-    version: "1.1",
+    version: "1.0.0",
     timeSaved: Date.now(),
     layers: [],
     highestLayer: 0,
@@ -110,6 +110,7 @@ const game = {
     alephLayer: new AlephLayer(),
     restackLayer: new ReStackLayer(),
     metaLayer: new MetaLayer(),
+    metaBoosters: new MetaBoosters(),
     currentLayer: null,
     currentChallenge: null,
     notifications: [],

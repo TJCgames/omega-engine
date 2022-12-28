@@ -171,6 +171,11 @@ const functions = {
                 return {active: value.active, resource: "d" + value.resource, layer: "d" + value.layer, multiplierUpgrades: value.multiplierUpgrades,
                     powerUpgrades: value.powerUpgrades};
             }
+            if(value instanceof MetaBoosters)
+            {
+                return {generators: value.generators, upgrades: value.upgrades, points: "d" + value.boostPoints, next: "d" + value.nextLayer,
+                        gBoost: "d" + value.genBoost, tBoost: "d" + value.totalBoost};
+            }
             return value;
         }
         return btoa(unescape(encodeURIComponent(JSON.stringify(game, replacer))));
@@ -300,6 +305,14 @@ const functions = {
         else
         {
             game.metaLayer = new MetaLayer();
+        }
+        if(loadObj.metaBoosters)
+        {
+            game.metaBoosters.load(loadObj.metaBoosters);
+        }
+        else
+        {
+            game.metaBoosters = new MetaBoosters();
         }
 
         if(localStorage.getItem(mod.primaryName+mod.secondaryName+"_Settings") !== null)
