@@ -20,12 +20,18 @@ Vue.component("news-ticker", {
                 "join the community server",
                 "content when",
                 "omega engine v-1.0.0: we removed all the features that aren't the main game",
-                "i lied, there's only 10 infinities",
+                "I lied, there's only 10 infinities",
                 "can you <b>size up</b>?",
                 "01110000 01110010 01100101 01110011 01110100 01101001 01100111 01100101",
                 "do we even exist?",
-                "infinity is confusing. the first spans from 65,536 to 131,071!",
-                "ah yes, o-llgers"
+                "<s>infinity is confusing. the first spans from 65,536 to 131,071!</s> I fixed it!!",
+                "ah yes, o-llgers",
+                "I dare you to touch grass",
+                "help I broke something",
+                "where the hell are achivements created??",
+                "wait bejs was made in TYPESCRIPT??",
+                "where'd vepro go?",
+                "should i make area but datas?"
             ],
             currentMessage: "",
             messageIndex: -1

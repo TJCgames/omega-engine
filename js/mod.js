@@ -1,7 +1,7 @@
 const mod = {
     primaryName: "Ʊ",
     secondaryName: "L",
-    version: "0.0.4",
+    version: "0.5",
     engineVer: "1.0.0 P1", //DO NOT MODIFY
     debugMode: false,
     Infinities: [new Decimal(65536), new Decimal("1e12"), new Decimal("1e100"), new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38"), new Decimal("ee100"), new Decimal(2).pow(new Decimal(2).pow(1024)), new Decimal("ee535")],
@@ -61,8 +61,8 @@ const mod = {
              "1 Mm²", "10 Mm²", "100 Mm²", "1000 Mm²", "10,000 Mm²", "100,000 Mm²", "1 Gm²", "10 Gm²", "100 Gm²", "1000 Gm²", "10,000 Gm²", "100,000 Gm²",
              "1 Tm²", "10 Tm²", "100 Tm²", "1000 Tm²", "10,000 Tm²", "100,000 Tm²", "1 Pm²", "10 Pm²", "100 Pm²", "1000 Pm²", "10,000 Pm²", "100,000 Pm²",
              "1 Em²", "10 Em²", "100 Em²", "1000 Em²", "10,000 Em²", "100,000 Em²", "1 Zm²", "10 Zm²", "100 Zm²", "1000 Zm²", "10,000 Zm²", "100,000 Zm²",
-             "1 Ym²", "10 Ym²", "100 Ym²", "1000 Ym²", "10,000 Ym²", "100,000 Ym²", "1,000,000 Ym²", "10,000,000 Ym²", "10,000,000 Ym²", "1,000,000,000 Ym²", "10,000,000,000 Ym²", "100,000,000,000 Ym²",
-             "1,000,000,000,000 Ym²"
+             "1 Ym²", "10 Ym²", "100 Ym²", "1000 Ym²", "10,000 Ym²", "100,000 Ym²", "1 Rm²", "10 Rm²", "100 Rm²", "1000 Rm²", "10,000 Rm²", "100,000 Rm²",
+             "1 Qm²", "10 Qm²", "100 Qm²", "1000 Qm²", "10,000 Qm²", "100,000 Qm²"
             ],
             "",
             ["1D", "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D"] 
