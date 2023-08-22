@@ -3,7 +3,7 @@ const mod = {
     secondaryName: "L",
     version: "0.6",
     engineVer: "1.0.0 P1", //DO NOT MODIFY
-    debugMode: true,
+    debugMode: false,
     Infinities: [new Decimal(65536), new Decimal("1e12"), new Decimal("1e100"), new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38"), new Decimal("ee100"), new Decimal(2).pow(new Decimal(2).pow(1024)), new Decimal("ee535")],
     themes: [
         ["Dark", "css/themes/dark.css"],
