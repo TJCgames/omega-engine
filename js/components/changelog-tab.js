@@ -5,7 +5,8 @@ Vue.component("changelog-tab", {
     <template v-slot:text>- Made reaching meta harder<br>
     - Added framework for Content&trade;<br>
     - More bugfixes for layer names<br>
-    - A few more news tickers
+    - A few more news tickers<br>
+    - Fixed generator names for non-alpha layers
     </template>
     </guide-item>
 

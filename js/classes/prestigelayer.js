@@ -335,7 +335,7 @@ class PrestigeLayer
             const bpMult = 0.2 + 0.6 * rand.nextDouble();
             const baseProd = new Decimal(0.02);
             this.powerGenerators.push(new PowerGenerator(this, i, i > 0 ? this.powerGenerators[i - 1] : null,
-                "P<sub>" + i + "</sub>",
+                i,
                 Decimal.pow(10, Decimal.pow(2, i)).mul(bpMult).floor(), Decimal.pow(10, Decimal.pow(2, i).add(1)), baseProd));
         }
     }
