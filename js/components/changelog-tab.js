@@ -1,12 +1,21 @@
 Vue.component("changelog-tab", {
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.6</template>
+    <template v-slot:text>- Made reaching meta harder<br>
+    - Added framework for Content&trade;<br>
+    - More bugfixes for layer names<br>
+    - A few more news tickers
+    </template>
+    </guide-item>
+
+    <guide-item>
     <template v-slot:title>v0.5</template>
     <template v-slot:text>- Bugfixed the entirety of the layer naming system<br>
     - Removed a "0." from the version number (if love2d can do it i can do it)<br>
     - A few more news tickers<br>
     - Slightly changed generator naming<br>
-    <s>- Content is approaching</s>
+    - Content&trade; is approaching
     </template>
     </guide-item>
 

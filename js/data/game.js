@@ -126,6 +126,7 @@ const game = {
     alephLayer: new AlephLayer(),
     restackLayer: new ReStackLayer(),
     metaLayer: new MetaLayer(),
+    infinityLayer: new InfinityLayer(),
     currentLayer: null,
     currentChallenge: null,
     notifications: [],

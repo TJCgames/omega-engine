@@ -103,8 +103,8 @@ const functions = {
             window.location.reload();
             return
         }
-        if (stuff[2].length != 4 && mod.debugMode == true) {
-            console.warn(`${stuff[2].length} infinity symbols detected in layer names, expected 4`)
+        if (stuff[2].length != 10 && mod.debugMode == true) {
+            console.warn(`${stuff[2].length} infinity symbols detected in layer names, expected 10`)
         }
         game.settings.layerNames = stuff;
         [LETTERS, ORDERS, GIANTS] = stuff;

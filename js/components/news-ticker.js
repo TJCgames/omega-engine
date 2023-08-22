@@ -31,7 +31,9 @@ Vue.component("news-ticker", {
                 "where the hell are achivements created??",
                 "wait bejs was made in TYPESCRIPT??",
                 "where'd vepro go?",
-                "should i make area but datas?"
+                "should i make area but datas?",
+                "(ƱƱ&middot;Π<sub>ͱ</sub><sup>Π</sup>)<sup>α</sup>",
+                "see also: The Prestige Tree by Jacorb"
             ],
             currentMessage: "",
             messageIndex: -1

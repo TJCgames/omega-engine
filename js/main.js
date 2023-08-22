@@ -246,6 +246,10 @@ onkeydown = e =>
         {
             game.settings.tab = "Layers";
         }
+        if(lc === "i" && game.metaLayer.layer.gte(mod.Infinities[0]))
+        {
+            game.settings.tab = "Infinity";
+        }
     }
 
     if(lc === "r" && !e.ctrlKey && game.restackLayer.isUnlocked())
