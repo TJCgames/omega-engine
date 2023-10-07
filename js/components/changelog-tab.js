@@ -1,6 +1,13 @@
 Vue.component("changelog-tab", {
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.7</template>
+    <template v-slot:text>- Modified greek layer name infinities<br>
+    - Modified how infinities are displayed
+    </template>
+    </guide-item>
+
+    <guide-item>
     <template v-slot:title>v0.6</template>
     <template v-slot:text>- Made reaching meta harder<br>
     - Added framework for Content&trade;<br>

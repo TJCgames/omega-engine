@@ -61,7 +61,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[0], infinityOrder)).floor());
-                return "(" + GIANTS[0] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[0] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[0] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[0]).floor()) + "</sup>";
         }
@@ -71,7 +71,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[1], infinityOrder)).floor());
-                return "(" + GIANTS[1] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[1] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[1] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[1]).floor()) + "</sup>";
         }
@@ -81,7 +81,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[2], infinityOrder)).floor());
-                return "(" + GIANTS[2] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[2] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[2] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[2]).floor()) + "</sup>";
         }
@@ -91,7 +91,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[3], infinityOrder)).floor());
-                return "(" + GIANTS[3] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[3] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[3] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[3]).floor()) + "</sup>";
         }
@@ -101,7 +101,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[4], infinityOrder)).floor());
-                return "(" + GIANTS[4] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[4] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[4] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[4]).floor()) + "</sup>";
         }
@@ -111,7 +111,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[5], infinityOrder)).floor());
-                return "(" + GIANTS[5] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[5] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[5] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[5]).floor()) + "</sup>";
         }
@@ -121,7 +121,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[6], infinityOrder)).floor());
-                return "(" + GIANTS[6] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[6] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[6] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[6]).floor()) + "</sup>";
         }
@@ -131,7 +131,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[7], infinityOrder)).floor());
-                return "(" + GIANTS[7] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[7] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[7] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[7]).floor()) + "</sup>";
         }
@@ -141,7 +141,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[8], infinityOrder)).floor());
-                return "(" + GIANTS[8] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[8] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[8] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[8]).floor()) + "</sup>";
         }
@@ -151,7 +151,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.sub(Decimal.mul(mod.Infinities[9], infinityOrder)).floor());
-                return "(" + GIANTS[9] + "&middot;" + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[9] + PrestigeLayer.getNameForLayer(infinityOrder.sub(1)) + ")<sup>" + exp + "</sup>";
             }
             return GIANTS[9] + "<sup>" + PrestigeLayer.getNameForLayer(layer.sub(mod.Infinities[9]).floor()) + "</sup>";
         }
