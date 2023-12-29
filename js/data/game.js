@@ -118,6 +118,7 @@ const game = {
         new Achievement("Volatility sucks!", "Get &epsilon; without layer volatility upgrade", "&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;", () => game.highestLayer >= 5 && game.volatility.layerVolatility.level.eq(0)),
     ],
     alephLayer: new AlephLayer(),
+    fractalLayer: new FractalLayer(),
     restackLayer: new ReStackLayer(),
     metaLayer: new MetaLayer(),
     currentLayer: null,

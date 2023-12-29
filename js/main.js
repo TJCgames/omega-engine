@@ -239,6 +239,10 @@ onkeydown = e =>
         {
             game.settings.tab = "Automators";
         }
+        if(lc === "f" && !e.ctrlKey && game.highestLayer >= 6)
+        {
+            game.settings.tab = "Fractal";
+        }
     }
     else
     {
