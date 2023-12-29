@@ -42,12 +42,22 @@ const game = {
             level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 60 : Infinity, null, {
                 getEffectDisplay: effectDisplayTemplates.automator()
             })),
+        autoVolatility: new Automator("Auto Volatility", "Automatically buy all Volatility upgrades", () =>
+        {
+            game.volatility.layerVolatility.buyMax()
+            game.volatility.autoMaxAll.buyMax()
+            game.volatility.prestigePerSecond.buyMax()
+        }, new DynamicLayerUpgrade(level => level + 6, () => null, () => "Decrease the Automator interval",
+            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(6).toNumber()) * 0.8),
+            level => level.gt(0) ? Math.pow(0.8, level.toNumber() - 1) * 150 : Infinity, null, {
+                getEffectDisplay: effectDisplayTemplates.automator()
+            })),
         autoAuto: new Automator("Auto Automators", "Automatically Max All Automators (except this)", () =>
         {
-            for(let i = 0; i < game.automators.length - 2; i++)
-            {
-                game.automators[i].upgrade.buyMax()
-            }
+            game.automators.autoMaxAll.upgrade.buyMax()
+            game.automators.autoPrestige.upgrade.buyMax()
+            game.automators.autoAleph.upgrade.buyMax()
+            game.automators.autoVolatility.upgrade.buyMax()
         }, new DynamicLayerUpgrade(level => level + 7, () => null, () => "Decrease the Automator interval",
             level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(10).toNumber()) * 10),
             level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 500 : Infinity, null, {

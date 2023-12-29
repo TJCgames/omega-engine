@@ -6,7 +6,7 @@ class Automator
         this.description = description;
         this.action = action;
         this.upgrade = upgrade;
-        this.active = false;
+        this.active = true;
 
         this.cooldown = 0;
         this.desiredInterval = 0;
