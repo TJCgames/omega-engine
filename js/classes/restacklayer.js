@@ -286,7 +286,7 @@ class ReStackLayer
 
     canMeta()
     {
-        return game.highestLayer >= 23 && this.metaUpgrade.level.gt(0);
+        return game.highestLayer >= 47 && this.metaUpgrade.level.gt(0);
     }
 
     goMeta()
