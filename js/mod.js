@@ -1,7 +1,7 @@
 const mod = {
     primaryName: "φ",
     secondaryName: "Layers",
-    version: "0.0.1",
+    version: "0.0.2",
     engineVer: "1.0.1", //DO NOT MODIFY
     debugMode: true,
     Infinities: [new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38")],
