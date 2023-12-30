@@ -162,6 +162,10 @@ const functions = {
             {
                 return {upgrade: value.upgrade, active: value.active, desiredInterval: value.desiredInterval};
             }
+            if(value instanceof FractalLayer)
+            {
+                return value.save();
+            }
             if(value instanceof ReStackLayer)
             {
                 return {layerCoins: "d" + value.layerCoins, permUpgrades: value.permUpgrades, metaUpgrade: value.metaUpgrade, upgradeTree: value.upgradeTree, timeSpent: value.timeSpent};
@@ -284,6 +288,14 @@ const functions = {
                     game.achievements[idx].isCompleted = ach.isCompleted;
                 }
             }
+        }
+        if(loadObj.fractalLayer)
+        {
+            game.fractalLayer.load(loadObj.fractalLayer);
+        }
+        else
+        {
+            game.fractalLayer = new FractalLayer();
         }
         if(loadObj.restackLayer)
         {

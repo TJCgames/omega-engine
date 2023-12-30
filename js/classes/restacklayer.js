@@ -197,7 +197,7 @@ class ReStackLayer
     getRestackGain()
     {
         const l = game.metaLayer.active ? game.metaLayer.layer : new Decimal(game.layers.length - 1);
-        let gain = l >= 9 ? Decimal.pow(10, l.sub(9).floor()) : new Decimal(0);
+        let gain = l >= 23 ? Decimal.pow(10, l.sub(22).floor()) : new Decimal(0);
         if (!game.metaLayer.active) {
             for (const layer of game.layers) {
                 if (layer.hasChallenges() && layer.layer >= 9) {

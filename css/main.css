@@ -543,6 +543,7 @@ p.resource-display > span:first-child{
 
 .fractal{
     font-weight: bold;
+    font-size: 150%;
     text-shadow: 0.07em 0 0.07em currentColor;
 }
 
@@ -552,11 +553,6 @@ p.resource-display > span:first-child{
 
 .fractal-tab .resource{
     font-size: 120%;
-}
-
-.fractal-tab .resource .resource{
-    font-size: 150%;
-    text-shadow: 0.07em 0 0.07em currentColor;
 }
 
 .fractal-tab .resource p:first-child{

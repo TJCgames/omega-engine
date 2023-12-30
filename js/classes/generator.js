@@ -43,6 +43,8 @@ class Generator
                 }
             }
         }
+        //fractal boosts
+        multi = multi.mul(game.fractalLayer.upgrades.globalBoost.apply())
         //individual generator boosts and multi boost
         let f = new Decimal(3);
         for(const l of game.layers)

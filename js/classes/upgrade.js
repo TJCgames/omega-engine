@@ -287,7 +287,7 @@ class ResourceUpgrade extends AbstractUpgrade
                 game.restackLayer.layerCoins = game.restackLayer.layerCoins.sub(res);
                 break;
             case RESOURCE_FRACTAL:
-                game.fractalLayer.fractalPoints = game.fractalLayer.fractalPoints.sub(res);
+                game.fractalLayer.reduceLayers(res);
         }
     }
 

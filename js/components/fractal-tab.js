@@ -14,5 +14,8 @@ Vue.component("fractal-tab", {
         <div class="resource">
             <p>You have <span class="fractal">{{formatNumber(fractal.fractalPoints, 0, 0, 1e9)}}</span> layers</p>
         </div>
+        <div class="upgrades">
+            <fractal-upgrade v-for="(u, i) in fractal.upgrades" :upgrade="u" :key="i"></fractal-upgrade>
+        </div>
     </div>`
 });
