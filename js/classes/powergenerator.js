@@ -33,6 +33,10 @@ class PowerGenerator extends Generator
                 }
             }
         }
+        //fractal boosts
+        multi = multi.mul(game.fractalLayer.upgrades.globalBoost.apply())
+        multi = multi.mul(game.fractalLayer.upgrades.layerBoost.apply(this.layer.layer))
+        //other boosts
         multi = multi.mul(game.alephLayer.upgrades.powerGenerators.apply());
         const power = game.restackLayer.permUpgrades.powerGenerators.apply();
         return Decimal.pow(2, Decimal.floor(this.bought.div(10))).mul(multi).pow(power);

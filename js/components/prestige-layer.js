@@ -91,7 +91,7 @@ Vue.component("prestige-layer", {
         },
     template: `<div class="prestige-layer">
 <resource-display :layer="layer"></resource-display>
-<p v-if="layer.hasSimpleBoost()" class="power-text">This translates to a <span class="big-number">x{{formatNumber(layer.getSimpleBoost(), 2, 2)}}</span> Boost on Layer 1 Production</p>
+<p v-if="layer.hasSimpleBoost()" class="power-text">This translates to a <span class="big-number">x{{formatNumber(layer.getSimpleBoost(), 2, 2)}}</span> Boost on <resource-name :layerid="0"></resource-name> Production</p>
 <div class="resource-button" v-if="layer.hasResourceButton"><button @click="layer.addResource(layer.getResourceButtonAmount())">+{{formatNumber(layer.getResourceButtonAmount(), 2, 0, 1e9)}} <resource-name :layerid="layer.layer"></resource-name></button></div>
 <button v-if="nextLayer && (layer.canGenerateNextLayer() || nextLayer.timesReset > 0)" :disabled="!layer.canPrestige()" class="prestige" @click="layer.prestige()">
     <span v-if="layer.isNonVolatile()">+{{formatNumber(layer.getPrestigeAmountPerSecond(), 2, 2)}} <resource-name :layerid="nextLayer.layer"></resource-name>/s</span>
@@ -117,7 +117,7 @@ Vue.component("prestige-layer", {
 </div>
 <div v-if="layer.hasPower() && tab === TAB_POWER">
     <p class="power-text">You have <span class="big-number">{{formatNumber(layer.power, 2, 2)}}</span> <resource-name :layerid="layer.layer"></resource-name>-Power, 
-    translated to a <span class="big-number">x{{formatNumber(layer.getPowerBoost(), 2, 2)}}</span> Boost on Layer 1 Generators</p>
+    translated to a <span class="big-number">x{{formatNumber(layer.getPowerBoost(), 2, 2)}}</span> Boost on <resource-name :layerid="layer.powerTargetLayer.layer"></resource-name> Generators</p>
     <generator-table :generators="layer.powerGenerators"></generator-table>
 </div>
 <div v-if="layer.hasChallenges() && tab === TAB_CHALLENGES">

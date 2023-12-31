@@ -341,6 +341,14 @@ class FractalLayerUpgrade extends ResourceUpgrade
     }
 }
 
+class LayeredFractalLayerUpgrade extends FractalLayerUpgrade
+{
+    apply(layer = 0)
+    {
+        return this.getEffect(this.level, layer);
+    }
+}
+
 class MetaDynamicLayerUpgrade extends AbstractUpgrade
 {
     constructor(description, getLayer, getPrice, getEffect, cfg)

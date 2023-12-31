@@ -268,11 +268,14 @@ class PrestigeLayer
     createPowerGenerators()
     {
         this.powerGenerators = [];
-        this.powerTargetLayer = game.layers[0];
-        this.powerTargetType = TARGET_GENERATORS;
-        if(this.layer === 2) //hardcoded
-        {
-            this.powerTargetLayer = game.layers[1];
+        let generatorLayers = game.layers.filter(val => (val.hasGenerators() || val.hasPower()));
+        let thisGenerator = generatorLayers.length
+        let powerToTarget = Math.floor(thisGenerator*(1/2+Math.sin(4*thisGenerator)/2));
+        if (powerToTarget == 0) {
+            this.powerTargetLayer = game.layers[0];
+            this.powerTargetType = TARGET_GENERATORS;
+        } else {
+            this.powerTargetLayer = game.layers[generatorLayers[powerToTarget].layer];
             this.powerTargetType = TARGET_POWERGENERATORS;
         }
         for(let i = 0; i < 10; i++)
