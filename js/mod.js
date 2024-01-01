@@ -1,9 +1,9 @@
 const mod = {
     primaryName: "φ",
     secondaryName: "Layers",
-    version: "0.2.0",
+    version: "0.2.1",
     engineVer: "1.0.1", //DO NOT MODIFY
-    debugMode: false,
+    debugMode: true,
     Infinities: [new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38")],
     themes: [
         ["Dark", "css/themes/dark.css"],
@@ -51,6 +51,12 @@ const mod = {
             Utils.createRandomWord(10, new Random(Date.now()).nextInt()),
             Utils.createRandomWord(10, new Random(Math.floor(Date.now()/2)).nextInt()),
             [Utils.createRandomWord(2, new Random(Math.floor(Date.now()/3)).nextInt()),Utils.createRandomWord(3, new Random(Math.floor(Date.now()/4)).nextInt()),Utils.createRandomWord(4, new Random(Math.floor(Date.now()/5)).nextInt()),Utils.createRandomWord(5, new Random(Math.floor(Date.now()/6)).nextInt())]
+        ]],
+        ["Playing cards",
+        [
+            "🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂼🂽🂾🂿",
+            "🃡🃢🃣🃤🃥🃦🃧🃨🃩🃪🃫🃬🃭🃮🃯🃰🃱🃲🃳🃴🃵🃠",
+            "♢♣♡♠"
         ]]
     ],
     layerNamePlaceholder: "𐌒",

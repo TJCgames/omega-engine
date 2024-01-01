@@ -48,7 +48,7 @@ const game = {
             game.volatility.autoMaxAll.buyMax()
             game.volatility.prestigePerSecond.buyMax()
         }, new DynamicLayerUpgrade(level => level + 6, () => null, () => "Decrease the Automator interval",
-            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(6).toNumber()) * 0.8),
+            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(5).toNumber()) * 0.8),
             level => level.gt(0) ? Math.pow(0.8, level.toNumber() - 1) * 150 : Infinity, null, {
                 getEffectDisplay: effectDisplayTemplates.automator()
             })),

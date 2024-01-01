@@ -6,6 +6,16 @@ Vue.component("changelog-tab", {
     },
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.2.1</template>
+    <template v-slot:text>
+        - Fixed a couple of bugs with the fractal layer
+        - Made the auto volatility cheaper
+        - Made the auto volatility only visible after you unlock volatility
+        - Made the fractal layer easier to reach
+        - Added a layer naming scheme
+    </template>
+    </guide-item>
+    <guide-item>
     <template v-slot:title>v0.2.0</template>
     <template v-slot:text>
         - Added another fractal upgrade. This one scales with your layer count.<br>
