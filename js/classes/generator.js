@@ -43,9 +43,8 @@ class Generator
                 }
             }
         }
-        //fractal boosts
-        multi = multi.mul(game.fractalLayer.upgrades.globalBoost.apply())
-        multi = multi.mul(game.fractalLayer.upgrades.layerBoost.apply(this.layer.layer))
+        //fractal and achievement boosts
+        multi = multi.mul(game.fractalLayer.upgrades.globalBoost.apply()).mul(game.fractalLayer.upgrades.layerBoost.apply(this.layer.layer)).mul(game.achievementBoost())
         //individual generator boosts and multi boost
         let f = new Decimal(3);
         for(const l of game.layers)

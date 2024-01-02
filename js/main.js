@@ -216,24 +216,20 @@ onkeydown = e =>
                 game.currentLayer.prestige();
             }
         }
-        for(const tab of ["Layers", "Guide", "Settings"])
+        for(const tab of ["Layers", "Guide", "Settings", "Achievements"])
         {
             if(lc === tab[0].toLowerCase() && !e.ctrlKey)
             {
                 game.settings.tab = tab;
             }
         }
-        if(lc === "t" && !e.ctrlKey && game.alephLayer.isUnlocked())
+        if(lc === "q" && !e.ctrlKey && game.alephLayer.isUnlocked())
         {
             game.settings.tab = "Aleph";
         }
         if(lc === "v" && !e.ctrlKey && game.highestLayer >= 2)
         {
             game.settings.tab = "Volatility";
-        }
-        if(lc === "c" && !e.ctrlKey)
-        {
-            game.settings.tab = "Achievements";
         }
         if(lc === "u" && !e.ctrlKey && game.highestLayer >= 1)
         {
@@ -252,6 +248,10 @@ onkeydown = e =>
         }
     }
 
+    if(lc === "c")
+    {
+        game.settings.tab = "Changelog";
+    }
     if(lc === "r" && !e.ctrlKey && game.restackLayer.isUnlocked())
     {
         game.settings.tab = "ReStack";

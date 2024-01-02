@@ -6,13 +6,24 @@ Vue.component("changelog-tab", {
     },
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.3.0</template>
+    <template v-slot:text>
+        - Removed the recently added layer naming scheme.<br>
+        - Added actually useful guides.<br>
+        - Added more achievements :).<br>
+        - Gave achievements an actual effect.<br>
+        - Changed the order of automators in the code.<br>
+        - Adjusted keybinds.
+    </template>
+    </guide-item>
+    <guide-item>
     <template v-slot:title>v0.2.1</template>
     <template v-slot:text>
-        - Fixed a couple of bugs with the fractal layer
-        - Made the auto volatility cheaper
-        - Made the auto volatility only visible after you unlock volatility
-        - Made the fractal layer easier to reach
-        - Added a layer naming scheme
+        - Fixed a couple of bugs with the fractal layer.<br>
+        - Made the auto volatility cheaper.<br>
+        - Made the auto volatility only visible after you unlock volatility.<br>
+        - Made the fractal layer easier to reach.<br>
+        - Added a layer naming scheme.<br>
     </template>
     </guide-item>
     <guide-item>

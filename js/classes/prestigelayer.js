@@ -243,7 +243,7 @@ class PrestigeLayer
         }
     }
 
-    //Power boosts all alpha Generators
+    //Power boosts all Generators of a layer
     getPowerBoost()
     {
         let power;

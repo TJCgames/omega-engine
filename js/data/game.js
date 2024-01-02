@@ -5,33 +5,15 @@ const game = {
     highestLayer: 0,
     highestUpdatedLayer: 0,
     automators: {
-        autoMaxAll: new Automator("Auto Max All", "Automatically buys max on all Layers", () =>
+        autoAuto: new Automator("Auto Automators", "Automatically Max All Automators (except this)", () =>
         {
-            for(let i = Math.max(0, game.volatility.autoMaxAll.apply().toNumber()); i < game.layers.length; i++)
-            {
-                game.layers[i].maxAll();
-            }
-        }, new DynamicLayerUpgrade(level => Math.floor(level / 3) + 1, () => null, () => "Decrease the Automator interval",
-            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.toNumber()) * [0.2, 0.5, 0.8][level.toNumber() % 3]),
-            level => level.gt(0) ? Math.pow(0.8, level.toNumber() - 1) * 10 : Infinity, null, {
-                getEffectDisplay: effectDisplayTemplates.automator()
-            })),
-        autoPrestige: new Automator("Auto Prestige", "Automatically prestiges all Layers", () =>
-        {
-            for(let i = 0; i < game.layers.length - 1; i++)
-            {
-                if(game.layers[game.layers.length - 2].canPrestige() && !game.settings.autoPrestigeHighestLayer)
-                {
-                    break;
-                }
-                if(game.layers[i].canPrestige() && !game.layers[i].isNonVolatile())
-                {
-                    game.layers[i].prestige();
-                }
-            }
-        }, new DynamicLayerUpgrade(level => Math.floor(level / 2) + 2, () => null, () => "Decrease the Automator interval",
-            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(2).toNumber()) * (level.toNumber() % 2 === 0 ? 0.25 : 0.75)),
-            level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 30 : Infinity, null, {
+            game.automators.autoMaxAll.upgrade.buyMax()
+            game.automators.autoPrestige.upgrade.buyMax()
+            game.automators.autoAleph.upgrade.buyMax()
+            game.automators.autoVolatility.upgrade.buyMax()
+        }, new DynamicLayerUpgrade(level => level + 7, () => null, () => "Decrease the Automator interval",
+            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(10).toNumber()) * 10),
+            level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 500 : Infinity, null, {
                 getEffectDisplay: effectDisplayTemplates.automator()
             })),
         autoAleph: new Automator("Auto Aleph", "Automatically Max All Aleph Upgrades", () =>
@@ -52,15 +34,33 @@ const game = {
             level => level.gt(0) ? Math.pow(0.8, level.toNumber() - 1) * 150 : Infinity, null, {
                 getEffectDisplay: effectDisplayTemplates.automator()
             })),
-        autoAuto: new Automator("Auto Automators", "Automatically Max All Automators (except this)", () =>
+        autoPrestige: new Automator("Auto Prestige", "Automatically prestiges all Layers", () =>
         {
-            game.automators.autoMaxAll.upgrade.buyMax()
-            game.automators.autoPrestige.upgrade.buyMax()
-            game.automators.autoAleph.upgrade.buyMax()
-            game.automators.autoVolatility.upgrade.buyMax()
-        }, new DynamicLayerUpgrade(level => level + 7, () => null, () => "Decrease the Automator interval",
-            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(10).toNumber()) * 10),
-            level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 500 : Infinity, null, {
+            for(let i = 0; i < game.layers.length - 1; i++)
+            {
+                if(game.layers[game.layers.length - 2].canPrestige() && !game.settings.autoPrestigeHighestLayer)
+                {
+                    break;
+                }
+                if(game.layers[i].canPrestige() && !game.layers[i].isNonVolatile())
+                {
+                    game.layers[i].prestige();
+                }
+            }
+        }, new DynamicLayerUpgrade(level => Math.floor(level / 2) + 2, () => null, () => "Decrease the Automator interval",
+            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.add(2).toNumber()) * (level.toNumber() % 2 === 0 ? 0.25 : 0.75)),
+            level => level.gt(0) ? Math.pow(0.6, level.toNumber() - 1) * 30 : Infinity, null, {
+                getEffectDisplay: effectDisplayTemplates.automator()
+            })),
+        autoMaxAll: new Automator("Auto Max All", "Automatically buys max on all Layers", () =>
+        {
+            for(let i = Math.max(0, game.volatility.autoMaxAll.apply().toNumber()); i < game.layers.length; i++)
+            {
+                game.layers[i].maxAll();
+            }
+        }, new DynamicLayerUpgrade(level => Math.floor(level / 3) + 1, () => null, () => "Decrease the Automator interval",
+            level => Decimal.pow(10, PrestigeLayer.getPrestigeCarryOverForLayer(level.toNumber()) * [0.2, 0.5, 0.8][level.toNumber() % 3]),
+            level => level.gt(0) ? Math.pow(0.8, level.toNumber() - 1) * 10 : Infinity, null, {
                 getEffectDisplay: effectDisplayTemplates.automator()
             })),
     },
@@ -100,17 +100,25 @@ const game = {
             }),
     },
     achievements: [
-        new Achievement("You played!", "If you dont have this, you shouldn't exist", "&omega;", () => true),
+        new Achievement("Guiding light", "Open the guide", '<img alt="G" class="inline" src="images/information-circle.svg"/>', () => game.settings.tab == "Guide"),
+        new Achievement("Onward and upward!", "Beta prestige", 'β', () => game.layers.length >= 2 && game.layers[1].timesReset >= 1),
+        new Achievement("Minecraft create mod", "Purchase an automator", '<img alt="Au" class="inline" src="images/hardware-chip.svg"/>', () => Object.values(game.automators).some(value => value.upgrade.level.gt(0))),
+        new Achievement("Secondary storage", "Purchase the first volatility upgrade", '<img alt="V" class="inline" src="images/save.svg"/>', () => Object.values(game.volatility).some(value => value.level.gt(0))),
+        new Achievement("Challenging!", "Comlete a challenge", 'γ', () => game.layers.filter(value => value.hasChallenges()).some(value => value.challenges.some(value2 => value2.level > 0))),
         new Achievement("Aleph-0", "Start gaining aleph", "&aleph;", () => game.alephLayer.isUnlocked()),
         new Achievement("Aleph-1", "Have 1e75 aleph", "&aleph;<sub>1</sub>", () => game.alephLayer.aleph.gte("1e75")),
         new Achievement("Aleph-2", "Have 1e200 aleph", "&aleph;<sub>2</sub>", () => game.alephLayer.aleph.gte("1e200")),
         new Achievement("Aleph-3", "Have 1.8e308 aleph", "&aleph;<sub>3</sub>", () => game.alephLayer.aleph.gte("1.8e308")),
-        new Achievement("Stacking up", "Do a restack and restart your progress", "&kappa;", () => game.restackLayer.timesReset > 0),
-        new Achievement("Upgradalicious", "Max all the non-meta upgrades", "↑<sub>↑<sub>↑</sub></sub>", () => (Object.values(game.restackLayer.permUpgrades).filter(u => u.level.gt(0)).length + Object.values(game.restackLayer.permUpgrades).filter(u => u.level.gt(1)).length) == 12),
+        new Achievement("Sierpinski", "Purchase a fractal upgrade and quietly weep", '<img alt="F" class="inline" src="images/sierpinski.svg"/>', () => Object.values(game.fractalLayer.upgrades).some(value => value.level.gt(0))),
+        new Achievement("Stacking up", "Do a restack and restart your progress", '<img alt="R" class="inline" src="images/layercoin.svg"/>', () => game.restackLayer.timesReset > 0),
+        new Achievement("Upgradalicious", "Max all the non-meta upgrades", "↑<sub>↑<sub>↑</sub></sub>", () => (Object.values(game.restackLayer.permUpgrades).every(value => value.level.gte(2)))),
         new Achievement("Idle^2", "Buy the meta upgrade", "↑<sub>2<sub>", () => game.restackLayer.metaUpgrade.level.gte(1)),
         new Achievement("No turning back", "Go meta and be reborn", "&Omega;", () => game.metaLayer.active),
         new Achievement("Endgame", "Reach layer 1.8e308 and finish "+mod.primaryName+mod.secondaryName, "Ʊ", () => game.metaLayer.layer.gte(mod.Infinities[0])),
     ],
+    achievementBoost() {
+        return Decimal.pow(1.2, game.achievements.filter(value => value.isCompleted).length)
+    },
     secretAchievements: [
         new Achievement("A very long wait...", "Have a game with over 3 months of time", "...", () => game.timeSpent > 50803200),
         new Achievement("Aleph-π", "Have πe314 aleph", "&aleph;<sub>π</sub>", () => game.alephLayer.aleph.gte("3.141e341")),

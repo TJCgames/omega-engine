@@ -14,9 +14,9 @@ Vue.component("automator-tab", {
 <div class="automators">
     <automator :automator="automators.autoMaxAll"></automator>
     <automator :automator="automators.autoPrestige"></automator>
-    <automator :automator="automators.autoAleph" v-if="alephUnlocked()"></automator>
     <automator :automator="automators.autoAuto" v-if="metaUnlocked()"></automator>
     <automator :automator="automators.autoVolatility" v-if="!metaUnlocked() && volaUnlocked()"></automator>
+    <automator :automator="automators.autoAleph" v-if="alephUnlocked()"></automator>
 </div>
 </div>`
 })
