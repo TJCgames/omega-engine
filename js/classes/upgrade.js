@@ -139,6 +139,10 @@ class LayerUpgrade extends AbstractUpgrade
         }
         return new Decimal(1);
     }
+    currentPrice()
+    {
+        return this.getPrice(this.level).pow(LayerUpgrade.getPricePower()).mul(game.fractalLayer.upgrades.costDivide.apply(this.layerCost.layer));
+    }
 
     static getEffectPower()
     {
@@ -226,6 +230,11 @@ class DynamicLayerUpgrade extends LayerUpgrade
     currentBoostLayer()
     {
         return game.layers[this.getBoostLayer(this.level.toNumber())];
+    }
+
+    currentPrice()
+    {
+        return this.getPrice(this.level);
     }
 
     buy()

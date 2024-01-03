@@ -22,7 +22,7 @@ class Challenge
 
     applyEffect()
     {
-        return this.getEffect(this.level);
+        return this.getEffect(this.level).pow(game.fractalLayer.upgrades.challengeEffect.apply());
     }
 
     applyReward()
