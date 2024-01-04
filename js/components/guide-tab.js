@@ -28,6 +28,7 @@ Vue.component("guide-tab", {
                 <li>G: Guide tab</li>
                 <li>S: Settings tab</li>
                 <li>C: φL changelog tab</li>
+                <li>M: Max all on layer</li>
                 <li v-if="layerUnlocked(1)">Arrows: Switch layer</li>
                 <li v-if="layerUnlocked(1)">P: Prestige</li>
                 <li v-if="layerUnlocked(1)">U: Automators</li>

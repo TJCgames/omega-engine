@@ -6,10 +6,17 @@ Vue.component("changelog-tab", {
     },
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.3.2</template>
+    <template v-slot:text>
+        - <i>Lots</i> of adjustments.<br>
+        - A new theme and layer naming scheme.
+    </template>
+    </guide-item>
+    <guide-item>
     <template v-slot:title>v0.3.1</template>
     <template v-slot:text>
         - Added 2 more fractal upgrades.<br>
-        - Fixed a couple of bug.<br>
+        - Fixed a couple of bugs.
     </template>
     </guide-item>
     <guide-item>

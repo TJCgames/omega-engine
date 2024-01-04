@@ -65,7 +65,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.div(Decimal.pow(mod.Infinities[0], infinityOrder)).floor().sub(1));
-                return "(" + GIANTS[0] + "↑↑" + functions.formatNumber(infinityOrder, 3, 0, 1e9) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[0] + "↑↑" + PrestigeLayer.getNameForLayer(infinityOrder) + ")↑" + exp;
             }
             return GIANTS[0] + "<sup>" + PrestigeLayer.getNameForLayer(layer.div(mod.Infinities[0]).floor().sub(1)) + "</sup>";
         }
@@ -75,7 +75,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.div(Decimal.pow(mod.Infinities[1], infinityOrder)).floor().sub(1));
-                return "(" + GIANTS[1] + "↑↑" + functions.formatNumber(infinityOrder, 3, 0, 1e9) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[1] + "↑↑" + PrestigeLayer.getNameForLayer(infinityOrder) + ")↑" + exp;
             }
             return GIANTS[1] + "<sup>" + PrestigeLayer.getNameForLayer(layer.div(mod.Infinities[1]).floor().sub(1)) + "</sup>";
         }
@@ -85,7 +85,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.div(Decimal.pow(mod.Infinities[2], infinityOrder)).floor().sub(1));
-                return "(" + GIANTS[2] + "↑↑" + functions.formatNumber(infinityOrder, 3, 0, 1e9) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[2] + "↑↑" + PrestigeLayer.getNameForLayer(infinityOrder) + ")↑" + exp;
             }
             return GIANTS[2] + "<sup>" + PrestigeLayer.getNameForLayer(layer.div(mod.Infinities[2]).floor().sub(1)) + "</sup>";
         }
@@ -95,7 +95,7 @@ class PrestigeLayer
             if(infinityOrder.gte(6))
             {
                 const exp = PrestigeLayer.getNameForLayer(layer.div(Decimal.pow(mod.Infinities[3], infinityOrder)).floor().sub(1));
-                return "(" + GIANTS[3] + "↑↑" + functions.formatNumber(infinityOrder, 3, 0, 1e9) + ")<sup>" + exp + "</sup>";
+                return "(" + GIANTS[3] + "↑↑" + PrestigeLayer.getNameForLayer(infinityOrder) + ")↑" + exp;
             }
             return GIANTS[3] + "<sup>" + PrestigeLayer.getNameForLayer(layer.div(mod.Infinities[3]).floor().sub(1)) + "</sup>";
         }
@@ -110,7 +110,7 @@ class PrestigeLayer
         }
         if(arrowOrder >= 4)
         {
-            return PrestigeLayer.getNameForLayer(Math.floor(nLayer / Math.pow(totalCombinations, arrowOrder - 1))) + "↑↑" + (arrowOrder - 1);
+            return PrestigeLayer.getNameForLayer(Math.floor(nLayer / Math.pow(totalCombinations, arrowOrder - 1))) + "↑↑" + PrestigeLayer.getNameForLayer(arrowOrder - 1);
         }
         if(nLayer >= totalCombinations)
         {

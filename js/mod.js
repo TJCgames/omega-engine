@@ -1,26 +1,27 @@
 const mod = {
     primaryName: "φ",
     secondaryName: "Layers",
-    version: "0.3.1",
+    version: "0.3.2",
     engineVer: "1.0.1", //DO NOT MODIFY
     debugMode: false,
     Infinities: [new Decimal(2).pow(1024), new Decimal("1.8e30008"), new Decimal("1.8e300000008"), new Decimal("ee38")],
     themes: [
         ["Dark", "css/themes/dark.css"],
-        ["Dark Alt (by Jeehan2561)", "css/themes/darkalt.css"],
+        ["Dark Alt (by MomentCookina)", "css/themes/darkalt.css"],
         ["Modern", "css/themes/modern.css"],
         ["Light", "css/themes/light.css"],
         ["Neon", "css/themes/neon.css"],
         ["Godot Blue", "css/themes/darkblue.css"],
         ["Halloween", "css/themes/spooky.css"],
-        ["eXPerience", "css/themes/experience.css"]
+        ["eXPerience", "css/themes/experience.css"],
+        ["Black (by Nif)", "css/themes/black.css"]
     ],
     layerNames: [
         ["Greek",
         [
             "αβγδεζηθικλμνξοπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ",
             "ψϝϛͱϻϙͳϸ",
-            ["<span class='flipped-v'>Ω</span>", "<span class='flipped-v'>Ω</span><sup>2</sup>","<span class='flipped-v'>Ω</span><sup>3</sup>","<span class='flipped-v'>Ω</span><sup>2<sup>2</sup></sup>"]
+            ["<span class='flipped-v'>Ω</span>", "<span class='flipped-v'>Ω</span><sup>2</sup>","<span class='flipped-v'>Ω</span><sup>3</sup>","<span class='flipped-v'>Ω</span><sup>4</sup>"]
         ]],
         ["Latin",
         [
@@ -45,6 +46,12 @@ const mod = {
             '01',
             "01",
             "2345"
+        ]],
+        ["Unknown",
+        [
+            "�",
+            "�",
+            ["￼", "undefined", "⍼", "?"]
         ]],
         ["Random",
         [

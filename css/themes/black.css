@@ -1,0 +1,66 @@
+:root{
+    --background-body: #000000;
+    --background-header: #000000;
+    --color-base: #000000;
+    --color-primary: #c0c0c0;
+    --color-hover: #202020;
+    --color-hover-strong: #404040;
+    --color-contrast: #c0c0c0;
+    --color-success: #004000;
+    --button-dark: #000000;
+    --notification--error: #400000;
+    --notification--success: #004000;
+    --notification--special: #000040;
+}
+
+header nav button{
+    background-color: #000000;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#automatorButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#volatilityButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#alephButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#fractalButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#restackButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+#debugButton {
+    background-color: #000000;
+    background-image: none;
+    color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+}
+
+div.layer-navigation button{
+    border: 1px solid #c0c0c0;
+}
