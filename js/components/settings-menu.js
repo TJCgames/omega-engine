@@ -184,7 +184,7 @@ Vue.component("settings-menu", {
     <p>Inspiration: Antimatter Dimensions by hevipelle, Infinite Layers by dan-simon</p>
     <p>Original Game (Omega Layers) created by VeproGames</p>
     <p>Powered by vue.js and break_eternity.min.js</p>
-    <p>${mod.primaryName + mod.secondaryName} v${mod.primaryName + mod.secondaryName === "ωEngine" ? mod.engineVer : mod.version}</p>
+    <p>${mod.primaryName + mod.secondaryName} v${mod.version.getVersionName()}</p>
     <p>${mod.primaryName + mod.secondaryName !== "ωEngine" ? "Made with ωEngine v" + mod.engineVer : ""}</p>
 </div>
 </div>`

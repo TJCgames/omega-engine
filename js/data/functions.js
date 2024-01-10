@@ -132,6 +132,10 @@ const functions = {
             {
                 return undefined;
             }
+            if(key == "version")
+            {
+                return value.getVersionId()
+            }
             if(value instanceof PrestigeLayer)
             {
                 return {challenges: value.challenges, generators: value.generators, powerGenerators: value.powerGenerators,
@@ -332,19 +336,7 @@ const functions = {
         this.setNames(game.settings.layerNames)
         this.setFont(game.settings.font)
 
-        if(game.version !== loadObj.version)
-        {
-            if(loadObj.version === "1.0" || loadObj.version === "1")
-            {
-                for(const l of game.layers)
-                {
-                    if(!l.isNonVolatile() && l.hasTreeUpgrades())
-                    {
-                        l.respecUpgradeTree();
-                    }
-                }
-            }
-        }
+        if (loadObj.version && mod.version.neq(loadObj.version)) { fixOldSave(new Maven(loadObj.version), loadObj) }
 
         if(!isImported && game.settings.offlineProgress && loadObj.timeSaved !== undefined)
         {

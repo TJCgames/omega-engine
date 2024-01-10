@@ -27,13 +27,6 @@ Vue.component("layer-navigation", {
                 return layerId < game.settings.showMinLayers || layerId >= game.layers.length - game.settings.showMaxLayers;
             },
             fullLayerName: layer => PrestigeLayer.getFullNameForLayer(layer),
-            removeLayers: count => {
-                if (game.layers.length <= count) {
-                    console.warn("Oh no! You are about to remove the last layer!")
-                } else {
-                    game.layers = game.layers.slice(0, game.layers.length - count)
-                }
-            }
         },
     template: `<div class="layer-navigation">
 <button :class="{selected: l.layer === currentLayer() && multipleLayers()}" :title="fullLayerName(l.layer)" v-if="isDisplayed(i)" v-for="(l, i) in layers" :key="i" @click="setCurrentLayer(l)" :style="{fontSize: buttonFontSize(l)}">
@@ -42,9 +35,6 @@ Vue.component("layer-navigation", {
 </button>
 <button style="background: green; font-size: 1.25rem;" onclick="functions.generateLayer(game.layers.length)" v-if="debugEnabled">
     <span class="resource-name" style="color: white">+</span>
-</button>
-<button style="background: red; font-size: 1.25rem;" @click="removeLayers(1)" v-if="debugEnabled">
-    <span class="resource-name" style="color: white">-</span>
 </button>
 </div>`
 });

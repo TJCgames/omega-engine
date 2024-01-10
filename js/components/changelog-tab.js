@@ -6,6 +6,15 @@ Vue.component("changelog-tab", {
     },
     template: `<div class="changelog-tab">
     <guide-item>
+    <template v-slot:title>v0.3.3</template>
+    <template v-slot:text>
+        - Made fractal upgrades not reduce your layers.<br>
+        - Removed everything to do with removing layers.<br>
+        - Added <span style="font-family: monospace">maven.js</span>.<br>
+        - Removed all secret achievements (they suck).
+    </template>
+    </guide-item>
+    <guide-item>
     <template v-slot:title>v0.3.2</template>
     <template v-slot:text>
         - <i>Lots</i> of adjustments.<br>

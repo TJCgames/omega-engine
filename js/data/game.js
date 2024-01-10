@@ -1,5 +1,4 @@
 const game = {
-    version: "1.1",
     timeSaved: Date.now(),
     layers: [],
     highestLayer: 0,
@@ -120,10 +119,7 @@ const game = {
         return Decimal.pow(1.2, game.achievements.filter(value => value.isCompleted).length)
     },
     secretAchievements: [
-        new Achievement("A very long wait...", "Have a game with over 3 months of time", "...", () => game.timeSpent > 50803200),
-        new Achievement("Aleph-π", "Have πe314 aleph", "&aleph;<sub>π</sub>", () => game.alephLayer.aleph.gte("3.141e341")),
-        new Achievement("Meta sucks!", "Get &Omega; without meta", "&Omega;&Omega;&Omega;&Omega;&Omega;&Omega;&Omega;&Omega;&Omega;&Omega;", () => game.highestLayer >= 47 && !game.metaLayer.active),
-        new Achievement("Volatility sucks!", "Get &epsilon; without layer volatility upgrade", "&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;&epsilon;", () => game.highestLayer >= 5 && game.volatility.layerVolatility.level.eq(0)),
+        
     ],
     alephLayer: new AlephLayer(),
     fractalLayer: new FractalLayer(),
